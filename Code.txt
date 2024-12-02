@@ -1,0 +1,71 @@
+using System;
+
+namespace FutureSecurityGame
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Ask for name and verifying
+            Console.WriteLine("Welcome to CyberSecure Inc.");
+            Console.Write("Enter your name: ");
+            string playerName = Console.ReadLine();
+
+            if (playerName != "Onur")
+            {
+                Console.WriteLine("Access declined.");
+                return;
+            }
+
+            Console.WriteLine($"\nHello, {playerName}. Identity verified. Answer the following questions to proceed.");
+
+            // Security questions
+            Console.WriteLine("\nQuestion 1: What is the AI passphrase?");
+            Console.WriteLine("A. Revolution\nB. Singularity\nC. Evolution");
+            Console.Write("Your choice: ");
+            string answer1 = Console.ReadLine();
+
+            if (answer1.ToUpper() != "B")
+            {
+                Console.WriteLine("Access declined.");
+                return;
+            }
+
+            Console.WriteLine("\nQuestion 2: What year was CyberSecure Inc. established?");
+            Console.WriteLine("A. 2045\nB. 2050\nC. 2060");
+            Console.Write("Your choice: ");
+            string answer2 = Console.ReadLine();
+
+            if (answer2 != "A")
+            {
+                Console.WriteLine("Access declined.");
+                return;
+            }
+
+            Console.WriteLine("\nQuestion 3: What is the encryption key's hash?");
+            Console.WriteLine("A. 0x4A1B\nB. 0x3F9E\nC. 0x5C7D");
+            Console.Write("Your choice: ");
+            string answer3 = Console.ReadLine();
+
+            if (answer3.ToUpper() != "C")
+            {
+                Console.WriteLine("Access declined.");
+                return;
+            }
+
+            Console.WriteLine("\nQuestion 4: What is the color of the security badge?");
+            Console.WriteLine("A. Blue\nB. Red\nC. Green");
+            Console.Write("Your choice: ");
+            string answer4 = Console.ReadLine();
+
+            if (answer4 != "B")
+            {
+                Console.WriteLine("Access declined.");
+                return;
+            }
+
+            // Access granted if all answers are correct
+            Console.WriteLine($"Access granted, {playerName}.");
+        }
+    }
+}
